@@ -1,5 +1,3 @@
-console.log("test")
-
 // 🍄 const
 const todoContainer = document.querySelector('.todo_container');
 const inputBox = document.querySelector('.input_box');
@@ -21,10 +19,11 @@ const todoClearAll = document.querySelector('.todo_clear_all');
 */
 
 // 🍄 addeventlistener
-// 2
+// 🦄js-4
 todoSubmit.addEventListener('click',todolist);
 
-todoClearAll.addEventListener('click',todolist);
+//🦄js-6
+todoClearAll.addEventListener('click',clearAll);
 
 // 🍄 function
 
@@ -57,6 +56,16 @@ function todolist(params) {
     button2.innerHTML = 'done'; 
     li.append(button2);    
 }
+
+/* 🦄js-6
+ when click 'clear all' , clear element    */
+
+function clearAll(params) {
+    location.reload();
+
+    
+}
+
 
 
 
