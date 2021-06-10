@@ -29,8 +29,25 @@ const todoClearAll = document.querySelector('.todo_clear_all');
 /* ⚡create */
 let div = document.createElement('div');
 div.className = 'todo';
-div.innerHTML = ''; //input box submitted
-
-
-// ●append
 document.body.append(div);
+
+let ol = document.createElement('ol');
+ol.className = 'todo_ol';
+div.append(ol);
+
+let li = document.createElement('li');
+li.className = 'todo_li';
+li.innerHTML = 'test'; //input box submitted
+ol.append(li);
+
+let button = document.createElement('button');
+button.className = 'todo_delete';
+button.innerHTML = 'x'; 
+li.append(button);
+
+let button2 = document.createElement('button');
+button2.className = 'todo_done';
+button2.innerHTML = 'done'; 
+li.append(button2);
+
+

@@ -11,3 +11,7 @@ html {
 
     list-style-position: inside;
   }
+
+  .todo_delete, .todo_done{
+      margin: .5rem;
+  }
