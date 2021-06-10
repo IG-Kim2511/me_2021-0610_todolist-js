@@ -9,9 +9,9 @@ html {
 
 .title{
     margin-top: 5rem;
+    color: #0eae44;
 }
 .todo_ul {
-
     list-style-position: inside;
   }
 
@@ -25,5 +25,5 @@ html {
  } 
 
  .todo_li{
-     color: red;
+     color: #0eae44;
  }

@@ -37,7 +37,6 @@ todoClearAll.addEventListener('click',clearAll);
 todoUl.addEventListener('click',clear);
 
 
-
 // 🍄 function
 
 /* 🍉js-4
