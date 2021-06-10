@@ -4,10 +4,13 @@ html {
 
 .input_box {
   font-size: 2rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
-.todo_ol {
+.title{
+    margin-top: 5rem;
+}
+.todo_ul {
 
     list-style-position: inside;
   }
