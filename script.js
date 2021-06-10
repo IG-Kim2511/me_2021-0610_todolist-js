@@ -36,22 +36,20 @@ todoClearAll.addEventListener('click',clearAll);
  
 todoUl.addEventListener('click',clear);
 
-
 // 🍄 function
 
-/* 🍉js-4
-1 create element  div ol li 
-2 when click 'submit' create element    */
+/* 🍉js-4, click 'submit', create elements */
 
-function todolist(params) {    
-    /* ⚡create */
-    // let div = document.createElement('div');
-    // div.className = 'todo';
-    // document.body.append(div);
+function todolist(params) {     
 
-    // let ul = document.createElement('ul');
-    // ul.className = 'todo_ul';
-    // div.append(ul);
+    if (todoInput.value === '') {
+        return;
+    } else {        
+        todolist_ig();
+    }
+}
+
+function todolist_ig() {
 
     let li = document.createElement('li');
     li.className = 'todo_li';      
@@ -68,7 +66,7 @@ function todolist(params) {
     button.innerHTML = 'delete'; 
     li.append(button);  
 
-    todoInput.value="";
+    todoInput.value="";    
 }
 
 /* 🍉js-6
@@ -92,13 +90,9 @@ function clearAll() {
     e.target.parentNode.classList.toggle('clear');  
     }
 
-    /* 🍉js-10
-    click 'x' on list, delete the list    */
-
+    /* 🍉js-10, click 'x' on list, delete the list    */
     else if(e.target.classList.contains('todo_delete')){
-
         e.target.parentNode.remove();
-
     } else {
       return;        
     }       
