@@ -15,6 +15,15 @@ html {
     list-style-position: inside;
   }
 
-  .todo_delete, .todo_done{
+.todo_delete, .todo_done{
       margin: .5rem;
   }
+
+
+.clear {
+    text-decoration:  line-through; 
+ } 
+
+ .todo_li{
+     color: red;
+ }

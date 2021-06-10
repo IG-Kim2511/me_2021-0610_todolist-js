@@ -2,12 +2,16 @@
 const todoContainer = document.querySelector('.todo_container');
 const inputBox = document.querySelector('.input_box');
 
-const input = document.querySelector('.input');
+const todoInput = document.querySelector('.todo_input');
+
 const todoSubmit = document.querySelector('.todo_submit');
 const todoClearAll = document.querySelector('.todo_clear_all');
 
+const todo = document.querySelector('.todo');
+const todoUl = document.querySelector('.todo_ul');
 
-
+const todoDelete = document.querySelector('.todo_delete');
+const todoDone = document.querySelector('.todo_done');
 /* 
 1 when click 'clear all'
 */
@@ -22,8 +26,17 @@ const todoClearAll = document.querySelector('.todo_clear_all');
 // 🦄js-4
 todoSubmit.addEventListener('click',todolist);
 
+
+
 //🦄js-6
 todoClearAll.addEventListener('click',clearAll);
+
+//🦄js-8
+todoUl.addEventListener('click',clear);
+
+//🦄js-10
+// todoDone.addEventListener('click',clearAll);
+
 
 // 🍄 function
 
@@ -33,18 +46,18 @@ todoClearAll.addEventListener('click',clearAll);
 
 function todolist(params) {    
     /* ⚡create */
-    let div = document.createElement('div');
-    div.className = 'todo';
-    document.body.append(div);
+    // let div = document.createElement('div');
+    // div.className = 'todo';
+    // document.body.append(div);
 
-    let ul = document.createElement('ul');
-    ul.className = 'todo_ul';
-    div.append(ul);
+    // let ul = document.createElement('ul');
+    // ul.className = 'todo_ul';
+    // div.append(ul);
 
     let li = document.createElement('li');
-    li.className = 'todo_li';
-    li.innerHTML = 'test'; //input box submitted
-    ul.append(li);
+    li.className = 'todo_li';      
+    li.innerText =todoInput.value; //input box submitted
+    todoUl.append(li);
 
     let button = document.createElement('button');
     button.className = 'todo_delete';
@@ -55,16 +68,33 @@ function todolist(params) {
     button2.className = 'todo_done';
     button2.innerHTML = 'done'; 
     li.append(button2);    
+
+    todoInput.value="";
 }
+
 
 /* 🦄js-6
  when click 'clear all' , clear element    */
 
 function clearAll(params) {
-    location.reload();
-
-    
+    location.reload();    
 }
+
+
+/* 🦄js-8
+ click 'done' on list, middle line on the list    */
+
+ function clear(e) {
+
+    // const child = e.target.childNodes;
+    // console.log(child);
+
+    e.target.parentNode.classList.toggle('clear');         
+ }
+
+ /* 🦄js-10
+ click 'x' on list, delete the list    */
+
 
 
 
