@@ -7,23 +7,25 @@ html {
   margin-top: 2rem;
 }
 
-.title{
-    margin-top: 5rem;
-    color: #0eae44;
+.title {
+  margin-top: 5rem;
+  color: #0eae44;
 }
 .todo_ul {
-    list-style-position: inside;
-  }
+  list-style-position: inside;
+}
 
-.todo_delete, .todo_done{
-      margin: .5rem;
-  }
+/* js */
+.todo_delete,
+.todo_done {
+  margin: 0.5rem;
+}
 
-
+/* js */
 .clear {
-    text-decoration:  line-through; 
- } 
+  text-decoration: line-through;
+}
 
- .todo_li{
-     color: #0eae44;
- }
+.todo_li {
+  color: #0eae44;
+}

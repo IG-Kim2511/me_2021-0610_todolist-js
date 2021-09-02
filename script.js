@@ -1,4 +1,4 @@
-// 🍄 const
+// 🍀 const
 const todoContainer = document.querySelector('.todo_container');
 const inputBox = document.querySelector('.input_box');
 
@@ -13,10 +13,9 @@ const todoUl = document.querySelector('.todo_ul');
 const todoDelete = document.querySelector('.todo_delete');
 const todoDone = document.querySelector('.todo_done');
 
+// 🍀
+/* 🍉js-4, click 'submit', create elements */
 
-// 🍄 addeventlistener
-
-// 🍉js-4
 todoSubmit.addEventListener('click',todolist);
 
 // 🍉js-4-2 enter key
@@ -27,21 +26,7 @@ todoInput.addEventListener('keypress', function (e) {
     }
 });
 
-//🍉js-6
-todoClearAll.addEventListener('click',clearAll);
-
-//🍉js-8
-/* 🦄 JS로 만든 li,button등등 element에 const지정할 수 없음, 
-👉 그래서 html에 있는 element인 ul을 지정함, 이벤트버블링 활용해서 코딩 */
- 
-todoUl.addEventListener('click',clear);
-
-// 🍄 function
-
-/* 🍉js-4, click 'submit', create elements */
-
-function todolist(params) {     
-
+function todolist(params) {
     if (todoInput.value === '') {
         return;
     } else {        
@@ -69,21 +54,23 @@ function todolist_ig() {
     todoInput.value="";    
 }
 
-/* 🍉js-6
- when click 'clear all' , clear element    */
+/* 🍉js-6,  when click 'clear all' , clear element    */
+todoClearAll.addEventListener('click',clearAll);
 
 function clearAll() {
     location.reload();    
 }
 
-/* 🍉js-8
- click 'done' on list, middle line on the list    */
 
-/* 🦄JS로 만든 li,button등등 element에 const지정할 수 없음, 
+//🍉js-8  click 'done' on list, middle line on the list 
+/* 🦄 JS로 만든 li,button등등 element에 const지정할 수 없음, 
+👉 그래서 html에 있는 element인 ul을 지정함, 이벤트버블링 활용해서 코딩
 👉 그래서 e.target으로 button의 parentNode인 li를 찾아냄. 
 👉 그래서 class이름으로 그 button을 지정함 */
+ 
+todoUl.addEventListener('click',clear);
 
- function clear(e) {
+function clear(e) {
     if (e.target.classList.contains('todo_done')) {
     // const child = e.target.childNodes;
     // console.log(child);
